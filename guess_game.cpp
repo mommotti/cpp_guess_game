@@ -1,26 +1,47 @@
 ﻿#include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 bool playGame(int guesses)
 {
 	cout << "Playing Game...\n";
-	int correct = 42;
+	int correct;
+		srand(time(NULL));
+	if(guesses == 1)
+	{
+		correct = rand() % 200;
+	}
+	else
+	{
+		correct = rand() % 20;
+	}
+	cout << correct << endl;
 	int guessCount = 0;
+		
+	cout << "Guess a number...\n";
+	cout << "You have " << guesses << " guesses.\n";
 	while(guessCount < guesses)
 	{
-
-	
-	cout << "Guess a number...";
-	cout << "You get " << guesses << " guesses.\n";
 	int guess;
     cin >> guess;
 	if (guess == correct)
 	{
 		return true;
+	} 
+	else if (guess > correct)
+	{
+		cout << "Your guess was too high.\n";
+	}
+	else
+	{
+		cout << "Your guess was too low.\n";
 	}
 	guessCount++;
-	cout << "You've guessed " << guessCount << " times.\n";
+	cout << "You've guessed " << guessCount << " / " << guesses << " times.\n";
+	
 }
     return false;
 
