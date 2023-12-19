@@ -20,7 +20,7 @@ bool playGame(int guesses)
 		return true;
 	}
 	guessCount++;
-	cout << "You've guessed " << guessCount << " times.\n"
+	cout << "You've guessed " << guessCount << " times.\n";
 }
     return false;
 
