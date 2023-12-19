@@ -6,6 +6,11 @@ bool playGame(int guesses)
 {
 	cout << "Playing Game...\n";
 	int correct = 42;
+	int guessCount = 0;
+	while(guessCount < guesses)
+	{
+
+	
 	cout << "Guess a number...";
 	cout << "You get " << guesses << " guesses.\n";
 	int guess;
@@ -14,7 +19,9 @@ bool playGame(int guesses)
 	{
 		return true;
 	}
-
+	guessCount++;
+	cout << "You've guessed " << guessCount << " times.\n"
+}
     return false;
 
 }
@@ -35,8 +42,16 @@ int main()
 		bool won;
 		if (beatGame)
 		{
-		   cout << "Because you beat the game, you can now play IMPOSSIBLE mode.\n";
+		  cout << "Because you beat the game, you can now play IMPOSSIBLE mode.\n";
 			won = playGame(1);
+			 if (won)
+		   {
+				cout << "Congrats, you won!\n";
+		   }
+		   else
+		   {
+				cout << "You lost. Try again later.\n";
+		   }
 		}  else
 		{
 			cout << "What difficulty?\n";
@@ -82,4 +97,3 @@ int main()
 	system("pause");
 	return 0;
 }
-
