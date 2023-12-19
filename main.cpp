@@ -2,9 +2,9 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-
 using namespace std;
 
+// THE GAME STARTS HERE (THIS FILE SHOULD BE IMPORTED BUT I FAILED)
 bool playGame(int guesses)
 {
 	cout << "Playing Game...\n";
@@ -46,6 +46,7 @@ bool playGame(int guesses)
     return false;
 
 }
+// THE GAME ENDS HERE
 
 int main()
 {
