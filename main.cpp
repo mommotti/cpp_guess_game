@@ -19,11 +19,11 @@ bool playGame(int guesses)
 		correct = rand() % 20;
 	}
 	cout << correct << endl;
-	int guessCount = 0;
 		
 	cout << "Guess a number...\n";
 	cout << "You have " << guesses << " guesses.\n";
-	while(guessCount < guesses)
+
+	for(int guessCount = 0; guessCount < guesses; guessCount++)
 	{
 	int guess;
     cin >> guess;
@@ -39,7 +39,6 @@ bool playGame(int guesses)
 	{
 		cout << "Your guess was too low.\n";
 	}
-	guessCount++;
 	cout << "You've guessed " << guessCount << " / " << guesses << " times.\n";
 	
 }
